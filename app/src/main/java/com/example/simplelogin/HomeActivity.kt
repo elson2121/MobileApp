@@ -14,7 +14,7 @@ class HomeActivity : AppCompatActivity() {
         val tvdashboard=findViewById<TextView>(R.id.tvDashboardTitle)
 
         if (username != null) {
-            tvWelcome.text = "Welcome to the Dashboard!\n\nNICE TO SEE YOU, $username!\nWelcome, $username!"
+            tvWelcome.text = "\nNICE TO SEE YOU, we love you guys $username!\nWelcome, $username! "
 
         }
     }

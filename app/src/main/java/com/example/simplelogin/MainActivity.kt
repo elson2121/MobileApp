@@ -6,6 +6,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import kotlin.jvm.java
 
 class MainActivity : AppCompatActivity() {
 
@@ -45,8 +46,13 @@ class MainActivity : AppCompatActivity() {
             }
 
 
-            }
 
+            }
+        //for the register button tap ti work
+        btnRegister.setOnClickListener {
+            val intent = Intent(this, RegisterActivity::class.java)
+            startActivity(intent)
+            
+        }
         }
     }
-}
