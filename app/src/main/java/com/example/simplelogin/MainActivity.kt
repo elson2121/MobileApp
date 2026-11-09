@@ -6,7 +6,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import kotlin.jvm.java
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -14,10 +14,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
         val etUsername = findViewById<EditText>(R.id.etUsername)
         val etPassword = findViewById<EditText>(R.id.etPassword)
         val btnLogin = findViewById<Button>(R.id.btnLogin)
         val btnRegister = findViewById<Button>(R.id.btnRegister)
+        val btnenter = findViewById<Button>(R.id.btnenter)
 
 
         btnLogin.setOnClickListener {
@@ -25,7 +27,8 @@ class MainActivity : AppCompatActivity() {
             val password = etPassword.text.toString().trim()
 
             if (username.isEmpty() || password.isEmpty()) {
-                Toast.makeText(this, "Please enter both username and password", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Please enter both username and password", Toast.LENGTH_SHORT)
+                    .show()
                 return@setOnClickListener
             }
 
@@ -38,21 +41,25 @@ class MainActivity : AppCompatActivity() {
                 finish() // Destroys MainActivity so pressing "Back" won't show the login screen again
 
 
-            }
-
-            else
-            {
+            } else {
                 Toast.makeText(this, "Invalid credentials. Try again.", Toast.LENGTH_SHORT).show()
             }
 
 
-
-            }
+        }
         //for the register button tap ti work
         btnRegister.setOnClickListener {
             val intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)
-            
+
         }
+        //for the register button tap to work i want to call it
+        btnenter.setOnClickListener {
+            val intent = Intent(this, EnterActivitiy::class.java)
+            startActivity(intent)
+            Toast.makeText(this, "the enter button touched ", Toast.LENGTH_SHORT).show()
+
+
         }
     }
+}
