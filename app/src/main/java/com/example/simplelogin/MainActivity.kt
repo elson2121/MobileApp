@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
                 val intent = Intent(this, HomeActivity::class.java)
                 intent.putExtra("USER_NAME", username) // Optional: pass data to the next screen
                 startActivity(intent)
-                finish() // Destroys MainActivity so pressing "Back" won't show the login screen again
+                 finish()
 
 
             } else {
@@ -54,7 +54,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
 
         }
-        //for the register button tap to work i want to call it
+        //for the register button tap to
         btnenter.setOnClickListener {
             val intent = Intent(this, EnterActivitiy::class.java)
             startActivity(intent)
@@ -64,7 +64,7 @@ class MainActivity : AppCompatActivity() {
         }
         //miser button
         btnmisir.setOnClickListener {
-            val intent = Intent(this, misir::class.java)
+            val intent = Intent(this, Misir::class.java)
             startActivity(intent)
             Toast.makeText(this, "the miser button touched ", Toast.LENGTH_SHORT).show()
         }

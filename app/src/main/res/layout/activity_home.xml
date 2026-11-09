@@ -6,6 +6,7 @@
     android:gravity="center"
     android:padding="16dp">
 
+    <!-- Your Dynamic Dynamic Greeting (Place this below the title in your layout) -->
     <TextView
         android:id="@+id/tvDashboardTitle"
         android:layout_width="wrap_content"
@@ -14,7 +15,6 @@
         android:textSize="24sp"
         android:textStyle="bold" />
 
-    <!-- Your Dynamic Dynamic Greeting (Place this below the title in your layout) -->
     <TextView
         android:id="@+id/tvWelcomeUser"
         android:layout_width="wrap_content"
