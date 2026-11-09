@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity() {
         val btnLogin = findViewById<Button>(R.id.btnLogin)
         val btnRegister = findViewById<Button>(R.id.btnRegister)
         val btnenter = findViewById<Button>(R.id.btnenter)
+        val btnmisir = findViewById<Button>(R.id.btnmisir)
 
 
         btnLogin.setOnClickListener {
@@ -61,5 +62,14 @@ class MainActivity : AppCompatActivity() {
 
 
         }
+        //miser button
+        btnmisir.setOnClickListener {
+            val intent = Intent(this, misir::class.java)
+            startActivity(intent)
+            Toast.makeText(this, "the miser button touched ", Toast.LENGTH_SHORT).show()
+        }
+
+
+
     }
 }

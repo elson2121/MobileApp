@@ -11,7 +11,7 @@ class HomeActivity : AppCompatActivity() {
 
         val username = intent.getStringExtra("USER_NAME")
         val tvWelcome = findViewById<TextView>(R.id.tvWelcomeUser)
-        val tvdashboard=findViewById<TextView>(R.id.tvDashboardTitle)
+
 
         if (username != null) {
             tvWelcome.text = "\nNICE TO SEE YOU, we love you guys $username!\nWelcome, $username! "
